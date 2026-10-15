@@ -7,7 +7,7 @@
   --danger: #C86A6A;
   --ok: #6AB275;
   --live: #9FFFAE;
-  --font: 'Lacquer', 'Segoe UI', system-ui, sans-serif;
+  --font: 'Acme', 'Lacquer', 'Segoe UI', system-ui, sans-serif;
   --mono: Consolas, 'Courier New', monospace;
 }
 * { box-sizing: border-box; }
@@ -17,24 +17,24 @@ button, input, select { font-family: inherit; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .app { padding: 24px 48px 48px; }
-.title { text-align: center; color: var(--accent); font-weight: 400; font-size: 34px; margin: 0 0 40px; letter-spacing: .03em; }
+.title { text-align: center; color: var(--accent); font-family: 'Lacquer', var(--font); font-weight: 400; font-size: 34px; margin: 0 0 40px; letter-spacing: .03em; }
 .layout { display: grid; grid-template-columns: minmax(540px, 650px) minmax(0, 1fr); gap: 24px; align-items: start; max-width: 1400px; margin: 0 auto; }
 
 /* Workspace */
-.ws { position: relative; border: 1px solid var(--ok); border-radius: 10px; padding: 14px 20px 18px; margin-bottom: 16px; }
-.ws-name { background: transparent; border: 0; border-bottom: 1px solid transparent; color: var(--ok); font-size: 24px; width: 70%; padding: 2px 0; }
+.ws { position: relative; border: 1px solid var(--ok); border-radius: 5px; padding: 14px 20px 18px; margin-bottom: 16px;  }
+.ws-name { background: transparent; border: 0; border-bottom: 1px solid transparent; color: var(--ok); font-size: 24px; width: 70%; padding: 2px 0; font-family: 'Lacquer' }
 .ws-name:focus { outline: none; border-bottom-color: var(--ok); }
 .ws-trash { position: absolute; top: 10px; right: 14px; }
 .ws-footer { display: flex; justify-content: flex-end; margin-top: 12px; }
 
 /* Project card */
-.card { position: relative; border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px 14px; margin-top: 12px; transition: border-color .2s; }
+.card { position: relative; border: 1px solid var(--line); border-radius: 5px; padding: 12px 14px 14px; margin-top: 12px; transition: border-color .2s; }
 .card.is-live { border-color: var(--live); }
 .card-top { position: absolute; top: 8px; right: 12px; display: flex; align-items: center; gap: 8px; }
 .row { display: flex; align-items: center; gap: 10px; }
 .row-controls { margin-top: 10px; }
 
-.pill { display: inline-flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--line); color: var(--accent); border-radius: 999px; padding: 4px 14px; font-size: 12px; cursor: pointer; white-space: nowrap; }
+.pill { display: inline-flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--line); color: var(--accent); border-radius: 5px; padding: 4px 14px; font-size: 12px; cursor: pointer; white-space: nowrap; }
 .pill:hover:not(:disabled) { border-color: var(--accent); }
 .pill:disabled { opacity: .5; cursor: not-allowed; }
 .pill-ok { background: transparent; border-color: var(--ok); color: var(--ok); font-size: 14px; }
@@ -45,7 +45,7 @@ button, input, select { font-family: inherit; }
 .path:focus { outline: none; border-bottom-color: var(--line); }
 
 .select-wrap { position: relative; flex: 1; min-width: 0; }
-.select-wrap select { appearance: none; width: 100%; background: var(--card); border: 1px solid var(--line); border-radius: 999px; color: var(--accent); font-size: 12px; padding: 5px 30px 5px 14px; cursor: pointer; }
+.select-wrap select { appearance: none; width: 100%; background: var(--card); border: 1px solid var(--line); border-radius: 5px; color: var(--accent); font-size: 12px; padding: 5px 30px 5px 14px; cursor: pointer; }
 .select-wrap select:disabled { opacity: .55; cursor: not-allowed; }
 .select-wrap svg { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); pointer-events: none; color: var(--line); }
 .select-wrap option { background: var(--card); color: var(--text); }

@@ -71,7 +71,7 @@ export function ProjectCard(p: Props) {
 
       <div className="row">
         <button className="pill" onClick={pickFolder} disabled={busy} title="Escolher pasta do projeto">
-          Diretório do projeto <LinkIcon />
+          Diretório <LinkIcon />
         </button>
         <input
           className="path"
