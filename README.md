@@ -7,4 +7,4 @@ Gerencia e executa workspaces Angular em segundo plano com fnm
 
 Após clonar o repositório:
 
-$ npm run dist  
+$ npm run exe  
