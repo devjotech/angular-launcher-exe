@@ -1,0 +1,53 @@
+{
+  "name": "angular-launcher",
+  "productName": "Iniciar Meus Projetos Angular",
+  "version": "1.0.0",
+  "description": "Gerencia e executa workspaces Angular em segundo plano com fnm",
+  "author": "Josiel Faria",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "concurrently -k \"vite\" \"wait-on tcp:5173 && electron .\"",
+    "build:web": "tsc --noEmit && vite build",
+    "dist": "npm run build:web && electron-builder --win portable nsis"
+  },
+  "dependencies": {
+    "@fontsource/lacquer": "^5.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^9.0.1",
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.0",
+    "wait-on": "^8.0.1"
+  },
+  "build": {
+    "appId": "dev.local.angular-launcher",
+    "productName": "Iniciar Meus Projetos Angular",
+    "files": [
+      "dist/**",
+      "electron/**",
+      "src/assets/icon.ico",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": [
+        "portable",
+        "nsis"
+      ],
+      "icon": "src/assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}

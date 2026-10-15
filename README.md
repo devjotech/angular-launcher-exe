@@ -1,2 +1,10 @@
 # angular-launcher-exe
-Projeto criado para facilitar rodar multi workspaces com angular
+
+Gerencia e executa workspaces Angular em segundo plano com fnm
+
+
+## crie .exe localmente
+
+Após clonar o repositório:
+
+$ npm run dist  
