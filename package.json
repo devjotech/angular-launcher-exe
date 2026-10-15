@@ -1,6 +1,6 @@
 {
   "name": "angular-launcher",
-  "productName": "Iniciar Meus Projetos Angular",
+  "productName": "Angular Launcher",
   "version": "1.0.0",
   "description": "Gerencia e executa workspaces Angular em segundo plano com fnm",
   "author": "Josiel Faria",
@@ -29,7 +29,7 @@
   },
   "build": {
     "appId": "dev.local.angular-launcher",
-    "productName": "Iniciar Meus Projetos Angular",
+    "productName": "Angular Launcher",
     "files": [
       "dist/**",
       "electron/**",

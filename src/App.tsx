@@ -70,7 +70,7 @@ export default function App() {
 
   return (
     <div className="app">
-      <h1 className="title">Iniciar meus projetos Angular</h1>
+      <h1 className="title">Angular Launcher</h1>
 
       <div className="layout">
         <main>

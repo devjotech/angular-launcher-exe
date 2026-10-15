@@ -14,7 +14,7 @@ function createWindow() {
     minHeight: 600,
     backgroundColor: "#1B262B",
     autoHideMenuBar: true,
-    title: "Iniciar meus projetos Angular",
+    title: "Angular Launcher",
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
       contextIsolation: true,
